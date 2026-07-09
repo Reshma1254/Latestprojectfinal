@@ -1,9 +1,11 @@
 package testscript;
 
+import org.testng.annotations.Test;
+
 import java.io.IOException;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+
 
 import pages.HomePage;
 import pages.LoginPage;
@@ -11,7 +13,7 @@ import pages.ManageNewsPage;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends Base {
-	@Test
+	@Test(groups={"Regression"})
 	public void verifyTheUserCanAddNews() throws IOException {
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "Loginpage");
@@ -26,7 +28,7 @@ public class ManageNewsTest extends Base {
 		newsinfo.clickSave();
 		boolean newsre = newsinfo.isSuccessDisplayed();
 		Assert.assertTrue(newsre);
-		//test
+		
 
 	}
 

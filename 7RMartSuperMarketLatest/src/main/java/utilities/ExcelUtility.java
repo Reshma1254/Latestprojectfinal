@@ -29,16 +29,6 @@ public class ExcelUtility {
 		return formatter.formatCellValue(c);
 	}
 
-	public static int getIntegerData(int a, int b, String sheet) throws IOException {
-		f = new FileInputStream(Constant.TESTDATA);// string data get method
-		w = new XSSFWorkbook(f);
-		s = w.getSheet(sheet);
-		XSSFRow r = s.getRow(a);
-		XSSFCell c = r.getCell(b);
-
-		int x = (int) c.getNumericCellValue();
-		return x;
-	}
-
+	
 
 }

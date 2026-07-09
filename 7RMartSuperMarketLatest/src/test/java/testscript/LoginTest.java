@@ -1,15 +1,17 @@
 package testscript;
 
+import org.testng.annotations.Test;
+
 import java.io.IOException;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+
 
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base{
-	@Test
+	@Test(groups= {"Regression"})
 	public void verifyTheUserisAbleToLoginWithValidCredentials() throws IOException
 	{
 		/*String usernamevalue="admin";

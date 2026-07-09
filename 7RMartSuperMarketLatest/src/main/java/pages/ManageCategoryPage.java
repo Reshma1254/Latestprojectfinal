@@ -5,7 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import constant.Constant;
+import utilities.FileUploadUtility;
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class ManageCategoryPage {
 	public WebDriver driver;
@@ -22,7 +25,9 @@ public class ManageCategoryPage {
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement success;
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement alert;
 	
-PageUtility javaexe= new PageUtility();
+FileUploadUtility obj=new FileUploadUtility();
+PageUtility page=new PageUtility();
+WaitUtility wait=new WaitUtility();
 	
 	public ManageCategoryPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -42,19 +47,20 @@ PageUtility javaexe= new PageUtility();
 		group.click();
 	}
 
-	public void uploadFile(String image) {
-		file.sendKeys(image);
+	public void uploadFile() {
+		obj.fileUploadUsingSendKeys(file, Constant.IMAGE2);
 
 	}
 	
 
 	public void clickSave() {
 		
-		javaexe.javaScriptExecutorClick(driver, save);
+		page.javaScriptExecutorClick(driver, save);
 		
 	}
 	public boolean isSuccessDisplayed()
 	{
+		wait.waitForVisibilityOff(driver, success);
 		return success.isDisplayed();
 	}
 	public boolean isAlertDisplayed() {

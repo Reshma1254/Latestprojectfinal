@@ -1,20 +1,21 @@
 package testscript;
 
+import org.testng.annotations.Test;
+
 import java.io.IOException;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+
 
 import pages.LogOutPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LogOutTest extends Base {
-	@Test(retryAnalyzer=retry.Retry.class)
+	@Test(retryAnalyzer=retry.Retry.class,groups= {"Regression"})
 
 	public void verifyUserIsAbleToLogOutSuccessfullyFromDashboard() throws IOException {
-		/*String usernamevalue = "admin";
-		String passwordvalue = "admin";*/
+		
 		String usernamevalue=ExcelUtility.getStringData(1, 0, "Loginpage");
 		String passwordvalue=ExcelUtility.getStringData(1, 1, "Loginpage");
 		
