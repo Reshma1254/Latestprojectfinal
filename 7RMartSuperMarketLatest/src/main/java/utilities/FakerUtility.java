@@ -32,7 +32,7 @@ public class FakerUtility {
 
 		}
 		public String generateCategory() {
-	        return faker.commerce().department();
+	        return faker.commerce().department() + System.currentTimeMillis();
 	    }
 
 }

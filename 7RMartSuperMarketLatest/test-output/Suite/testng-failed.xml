@@ -2,59 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
+    <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="testscript.ManageCODTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="VerifyWhetherTheUserIsAbleToSelectTheRadioButton"/>
-          <include name="initialiseBrowser"/>
-        </methods>
-      </class> <!-- testscript.ManageCODTest -->
-      <class name="testscript.LogOutTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="verifyUserIsAbleToLogOutSuccessfullyFromDashboard"/>
-          <include name="initialiseBrowser"/>
-        </methods>
-      </class> <!-- testscript.LogOutTest -->
-      <class name="testscript.ManageNewsTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="verifyTheUserCanAddNews"/>
-          <include name="initialiseBrowser"/>
-        </methods>
-      </class> <!-- testscript.ManageNewsTest -->
       <class name="testscript.ManageCategoryTest">
         <methods>
-          <include name="closeBrowser"/>
           <include name="verifyUserCanAddCategories"/>
           <include name="initialiseBrowser"/>
+          <include name="browserQuit"/>
         </methods>
       </class> <!-- testscript.ManageCategoryTest -->
-      <class name="testscript.AdminUserTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="verifyTheUserIsAbleToAddAdminUsers"/>
-          <include name="initialiseBrowser"/>
-        </methods>
-      </class> <!-- testscript.AdminUserTest -->
-      <class name="testscript.ManageDeliveryBoyTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="verifyTheUserIsAbleToAddDeliverBoyDetails"/>
-          <include name="initialiseBrowser"/>
-        </methods>
-      </class> <!-- testscript.ManageDeliveryBoyTest -->
-      <class name="testscript.LoginTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="verifyTheUserisAbleToLoginWithValidCredentials"/>
-          <include name="verifyTheUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword"/>
-          <include name="initialiseBrowser"/>
-          <include name="verifyTheUserIsAbleToLoginWithValidUsernameAndInvalidPassword"/>
-          <include name="verifyTheUserIsAbleToLoginWithInvalidUsernameAndValidPassword"/>
-        </methods>
-      </class> <!-- testscript.LoginTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

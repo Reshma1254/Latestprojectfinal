@@ -34,6 +34,7 @@ public class ManageCategoryTest extends Base {
 		add.uploadFile();
 
 		add.clickSave();
+		
 		boolean category = add.isSuccessDisplayed();
 		Assert.assertTrue(category);
 	}
