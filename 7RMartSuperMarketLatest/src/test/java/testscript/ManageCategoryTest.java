@@ -14,7 +14,7 @@ import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
 public class ManageCategoryTest extends Base {
-	@Test(groups= {"Regression"})
+	@Test(groups= {"Regression"},description="verify the user is able to add categories successfully")
 	public void verifyUserCanAddCategories() throws IOException {
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "Loginpage");

@@ -12,7 +12,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LogOutTest extends Base {
-	@Test(retryAnalyzer=retry.Retry.class,groups= {"Regression"})
+	@Test(retryAnalyzer=retry.Retry.class,groups= {"Regression"},description="verify the user is abe to Log out successfully")
 
 	public void verifyUserIsAbleToLogOutSuccessfullyFromDashboard() throws IOException {
 		

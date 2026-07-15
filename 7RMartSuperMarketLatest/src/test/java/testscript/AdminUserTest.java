@@ -11,10 +11,11 @@ import pages.AdminUserPage;
 import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 
 public class AdminUserTest extends Base {
 	 
-		@Test //test
+		@Test(description="verify whether the user is able to add AdminUser details successfully")
 		public void verifyTheUserIsAbleToAddAdminUsers() throws IOException {
 			String usernamevalue = ExcelUtility.getStringData(1, 0, "Loginpage");
 			String passwordvalue = ExcelUtility.getStringData(1, 1, "Loginpage");
@@ -24,10 +25,12 @@ public class AdminUserTest extends Base {
 			AdminUserPage info = home.clickAdminUserMoreInfo();
 			info.clickNewButton();
 			
-
-			String usernameval = ExcelUtility.getStringData(1, 0, "AdminUser");
-			String passwordvalu = ExcelUtility.getStringData(1, 1, "AdminUser");
-			String usertype1 = ExcelUtility.getStringData(1, 2, "AdminUser");
+			FakerUtility faker = new FakerUtility();
+			String usernameval=faker.creatARandomFirstName();
+			String passwordvalu = ExcelUtility.getStringData(1, 0, "AdminUser");
+			
+			
+			String usertype1 = ExcelUtility.getStringData(1, 1, "AdminUser");
 			
 
 			info.enterUsername(usernameval);
@@ -37,7 +40,7 @@ public class AdminUserTest extends Base {
 			info.enterUserType(usertype1);
 			info.enterSave();
 			
-			boolean admin=info.isAlertDisplayed();
+			boolean admin=info.isSuccessDisplayed();
 			Assert.assertTrue(admin);
 
 			

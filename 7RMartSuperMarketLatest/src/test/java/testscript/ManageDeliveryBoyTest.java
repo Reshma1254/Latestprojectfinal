@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
 public class ManageDeliveryBoyTest extends Base {
-	@Test
+	@Test(description="Verify that the user is able to add the Delivery boy details successfully")
 	public void verifyTheUserIsAbleToAddDeliverBoyDetails() throws IOException
 	{
 		String usernamevalue=ExcelUtility.getStringData(1, 0, "Loginpage");

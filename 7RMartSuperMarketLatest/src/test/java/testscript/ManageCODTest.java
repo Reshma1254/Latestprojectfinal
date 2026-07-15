@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 
 
 public class ManageCODTest extends Base {
-	@Test
+	@Test(description="verify the user is able to select the respective radiobutton according to their payment preferences")
 	public void VerifyWhetherTheUserIsAbleToSelectTheRadioButton() throws IOException
 	{
 		String usernamevalue=ExcelUtility.getStringData(1, 0, "Loginpage");

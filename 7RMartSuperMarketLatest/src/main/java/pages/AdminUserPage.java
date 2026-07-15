@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class AdminUserPage {
 	public WebDriver driver;
@@ -19,6 +20,7 @@ public class AdminUserPage {
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement success;
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement alert;
 	PageUtility drop= new PageUtility();//test
+	WaitUtility wait=new WaitUtility();
 	
 	public AdminUserPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -49,6 +51,7 @@ public class AdminUserPage {
 	}
 	public boolean isSuccessDisplayed()
 	{
+		wait.waitForVisibilityOff(driver, success);
 		return success.isDisplayed();
 	}
 	public boolean isAlertDisplayed()

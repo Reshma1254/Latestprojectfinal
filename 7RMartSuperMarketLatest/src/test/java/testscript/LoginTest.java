@@ -11,7 +11,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base{
-	@Test(groups= {"Regression"})
+	@Test(groups= {"Regression"},description="verify whether user is able to Login successfully")
 	public void verifyTheUserisAbleToLoginWithValidCredentials() throws IOException
 	{
 		/*String usernamevalue="admin";
