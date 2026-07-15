@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import org.testng.Assert;
 
-import constant.Constant;
+
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageCategoryPage;
