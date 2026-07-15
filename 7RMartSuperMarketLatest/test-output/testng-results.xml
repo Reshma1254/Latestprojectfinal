@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-13T11:53:49 IST" name="Suite" finished-at="2026-07-13T11:53:53 IST" duration-ms="4278">
+  <suite started-at="2026-07-15T12:20:49 IST" name="Suite" finished-at="2026-07-15T12:20:56 IST" duration-ms="7730">
     <groups>
       <group name="Regression">
-        <method signature="ManageNewsTest.verifyTheUserCanAddNews()[pri:0, instance:testscript.ManageNewsTest@169bb4dd]" name="verifyTheUserCanAddNews" class="testscript.ManageNewsTest"/>
+        <method signature="ManageNewsTest.verifyTheUserCanAddNews()[pri:0, instance:testscript.ManageNewsTest@6a4f1a55]" name="verifyTheUserCanAddNews" class="testscript.ManageNewsTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test started-at="2026-07-13T11:53:49 IST" name="Test" finished-at="2026-07-13T11:53:53 IST" duration-ms="4278">
+    <test started-at="2026-07-15T12:20:49 IST" name="Test" finished-at="2026-07-15T12:20:56 IST" duration-ms="7730">
       <class name="testscript.ManageNewsTest">
-        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@169bb4dd]" started-at="2026-07-13T11:53:49 IST" name="initialiseBrowser" finished-at="2026-07-13T11:53:51 IST" duration-ms="2335" status="PASS">
+        <test-method is-config="true" signature="initialiseBrowser(java.lang.String)[pri:0, instance:testscript.ManageNewsTest@6a4f1a55]" started-at="2026-07-15T12:20:49 IST" name="initialiseBrowser" finished-at="2026-07-15T12:20:54 IST" duration-ms="4857" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,15 +21,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialiseBrowser -->
-        <test-method signature="verifyTheUserCanAddNews()[pri:0, instance:testscript.ManageNewsTest@169bb4dd]" started-at="2026-07-13T11:53:51 IST" name="verifyTheUserCanAddNews" finished-at="2026-07-13T11:53:53 IST" duration-ms="1854" status="PASS">
+        <test-method signature="verifyTheUserCanAddNews()[pri:0, instance:testscript.ManageNewsTest@6a4f1a55]" started-at="2026-07-15T12:20:54 IST" name="verifyTheUserCanAddNews" description="Verify that a user can add a news item successfully" finished-at="2026-07-15T12:20:56 IST" duration-ms="2777" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTheUserCanAddNews -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@169bb4dd]" started-at="2026-07-13T11:53:53 IST" name="browserQuit" finished-at="2026-07-13T11:53:53 IST" duration-ms="77" status="PASS">
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testscript.ManageNewsTest@6a4f1a55]" started-at="2026-07-15T12:20:56 IST" name="browserQuit" finished-at="2026-07-15T12:20:56 IST" duration-ms="80" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyTheUserCanAddNews status=SUCCESS method=ManageNewsTest.verifyTheUserCanAddNews()[pri:0, instance:testscript.ManageNewsTest@169bb4dd] output={null}]]]>
+                <![CDATA[[TestResult name=verifyTheUserCanAddNews status=SUCCESS method=ManageNewsTest.verifyTheUserCanAddNews()[pri:0, instance:testscript.ManageNewsTest@6a4f1a55] output={null}]]]>
               </value>
             </param>
           </params>
