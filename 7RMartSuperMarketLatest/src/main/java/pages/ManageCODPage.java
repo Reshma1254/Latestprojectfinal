@@ -17,7 +17,7 @@ public class ManageCODPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	public void clickFirstRadioButton()
+	public ManageCODPage clickFirstRadioButton()
 	{
 	if(yesbutton.isSelected())
 	{
@@ -27,8 +27,9 @@ public class ManageCODPage {
 	{
 		yesbutton.click();
 	}
+	return this;
 	}
-	public void clickSecondRadioButton()
+	public ManageCODPage clickSecondRadioButton()
 	{
 	if(nobutton.isSelected())
 	{
@@ -38,10 +39,12 @@ public class ManageCODPage {
 	{
 		nobutton.click();
 	}
+	return this;
 	}
-	public void clickSave()
+	public ManageCODPage  clickSave()
 	{
 		save.click();
+		return this;
 	}
 	public boolean isSuccessDisplayed()
 	{

@@ -34,28 +34,33 @@ WaitUtility wait=new WaitUtility();
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	public void clickNewButton()
+	public ManageCategoryPage clickNewButton()
 	{
 		newbutton.click();
+		return this;
 		
 	}
-	public void enterCategory(String addcategory) {
+	public ManageCategoryPage enterCategory(String addcategory) {
 		category.sendKeys(addcategory);
+		return this;
 	}
 
-	public void selectGroup() {
+	public ManageCategoryPage  selectGroup() {
 		group.click();
+		return this;
 	}
 
-	public void uploadFile() {
+	public ManageCategoryPage  uploadFile() {
 		obj.fileUploadUsingSendKeys(file, Constant.IMAGE2);
+		return this;
 
 	}
 	
 
-	public void clickSave() {
+	public ManageCategoryPage  clickSave() {
 		
 		page.javaScriptExecutorClick(driver, save);
+		return this;
 		
 	}
 	public boolean isSuccessDisplayed()

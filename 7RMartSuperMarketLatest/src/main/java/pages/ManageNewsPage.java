@@ -23,19 +23,23 @@ public class ManageNewsPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void clickNewButton()
+	public 	ManageNewsPage clickNewButton()
 	{
 		wait.waitForElementToBeClickable(driver, newbutton);
 		newbutton.click();
+		return this;
 		
 	}
-	public void enterNews(String report)
+	public ManageNewsPage enterNews(String report)
 	{
 		news.sendKeys(report);
+		return this;
+		
 	}
-	public void clickSave()
+	public ManageNewsPage clickSave()
 	{
 		save.click();
+		return this;
 	}
 	public boolean isSuccessDisplayed()
 	{

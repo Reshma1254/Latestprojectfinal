@@ -32,39 +32,46 @@ public class ManageDeliveryBoyPage {
 	WaitUtility wait=new WaitUtility();
 	PageUtility page=new PageUtility();
 	
-	public void clickNew()
+	public ManageDeliveryBoyPage clickNew()
 	{
 		newbutton.click();
+		return this;
 	}
-	public void enterName(String names)
+	public ManageDeliveryBoyPage enterName(String names)
 	{
 		name.sendKeys(names);
+		return this;
 	}
-	public void enterEmail(String mail)
+	public ManageDeliveryBoyPage enterEmail(String mail)
 	{
 		email.sendKeys(mail);
+		return this;
 	}
-	public void enterPhone(String ph)
+	public ManageDeliveryBoyPage enterPhone(String ph)
 	{
 		phone.sendKeys(ph);
+		return this;
 	}
 	public void enterAddress(String adrs)
 	{
 		address.sendKeys(adrs);
 	}
-	public void enterUsername(String usr)
+	public ManageDeliveryBoyPage enterUsername(String usr)
 	{
 		username.sendKeys(usr);
+		return this;
 	}
-	public void enterPassword(String pass)
+	public ManageDeliveryBoyPage enterPassword(String pass)
 	{
 		password.sendKeys(pass);
+		return this;
 	}
-	public void clickSave()
+	public ManageDeliveryBoyPage clickSave()
 	{
 		wait.waitForElementToBeClickable(driver, save);
 		page.javaScriptExecutorPageScroll(driver, 0, 500);
 		page.javaScriptExecutorClick(driver, save);
+		return this;
 	}
 	public boolean isSuccessDisplayed()
 	{

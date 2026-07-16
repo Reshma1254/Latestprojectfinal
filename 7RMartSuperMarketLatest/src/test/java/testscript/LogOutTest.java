@@ -6,12 +6,15 @@ import java.io.IOException;
 
 import org.testng.Assert;
 
-
+import pages.HomePage;
 import pages.LogOutPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LogOutTest extends Base {
+HomePage home;
+LoginPage login;
+	
 	@Test(retryAnalyzer=retry.Retry.class,groups= {"Regression"},description="verify the user is abe to Log out successfully")
 
 	public void verifyUserIsAbleToLogOutSuccessfullyFromDashboard() throws IOException {
@@ -20,12 +23,13 @@ public class LogOutTest extends Base {
 		String passwordvalue=ExcelUtility.getStringData(1, 1, "Loginpage");
 		
 		LoginPage loginpage=new LoginPage(driver);
-		loginpage.enterUserName(usernamevalue);
-		loginpage.enterPassword(passwordvalue);
-		loginpage.signIn();
+		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
+		//loginpage.enterPassword(passwordvalue);
+		home=loginpage.signIn();
+	
 		LogOutPage logoutpage = new LogOutPage(driver);
-		logoutpage.clickOnAdminButton();
-		logoutpage.clickOnLogOutButton();
+		loginpage=logoutpage.clickOnAdminButton().clickOnLogOutButton();
+		
 		boolean statuse=logoutpage.isSignInisDisplayed();
 		Assert.assertTrue(statuse);
 

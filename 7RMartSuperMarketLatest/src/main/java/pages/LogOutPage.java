@@ -21,12 +21,14 @@ public class LogOutPage {
 
 	
 
-	public void clickOnAdminButton() {
+	public LogOutPage clickOnAdminButton() {
 		admin.click();
+		return this;
 	}
 
-	public void clickOnLogOutButton() {
+	public LoginPage clickOnLogOutButton() {
 		logout.click();
+		return new LoginPage(driver);
 	}
 	public boolean isSignInisDisplayed()
 	{

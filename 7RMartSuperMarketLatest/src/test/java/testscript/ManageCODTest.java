@@ -12,6 +12,7 @@ import utilities.ExcelUtility;
 
 
 public class ManageCODTest extends Base {
+	HomePage home;
 	@Test(description="verify the user is able to select the respective radiobutton according to their payment preferences")
 	public void VerifyWhetherTheUserIsAbleToSelectTheRadioButton() throws IOException
 	{
@@ -19,7 +20,7 @@ public class ManageCODTest extends Base {
 		String passwordvalue=ExcelUtility.getStringData(1, 1, "Loginpage");
 		
 		LoginPage loginpage=new LoginPage(driver);
-		HomePage home=loginpage.login(usernamevalue, passwordvalue);
+		 home=loginpage.login(usernamevalue, passwordvalue);
 		ManageCODPage cod=home.clickManageCODMoreInfo();
 		cod.clickFirstRadioButton();
 		cod.clickSave();

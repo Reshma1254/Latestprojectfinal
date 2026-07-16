@@ -27,27 +27,31 @@ public class AdminUserPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	public void clickNewButton()
+	public AdminUserPage clickNewButton()
 	{
 		newbutton.click();
+		return this;
 		
 	}
-	public void enterUsername(String user)
+	public AdminUserPage enterUsername(String user)
 	{
 		username.sendKeys(user);
+		return this;
 	}
 	public void enterPassword(String pass)
 	{
 		password.sendKeys(pass);
 	}
-	public void enterUserType(String type)
+	public AdminUserPage enterUserType(String type)
 	{
 		drop.dropDownVisibleText(usertype,type);
+		return this;
 		
 	}
-	public void enterSave()
+	public AdminUserPage enterSave()
 	{
 		save.click();
+		return this;
 	}
 	public boolean isSuccessDisplayed()
 	{

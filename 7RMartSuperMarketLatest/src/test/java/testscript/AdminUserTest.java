@@ -14,6 +14,7 @@ import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
 public class AdminUserTest extends Base {
+	HomePage home;
 	 
 		@Test(description="verify whether the user is able to add AdminUser details successfully")
 		public void verifyTheUserIsAbleToAddAdminUsers() throws IOException {
@@ -21,7 +22,7 @@ public class AdminUserTest extends Base {
 			String passwordvalue = ExcelUtility.getStringData(1, 1, "Loginpage");
 
 			LoginPage loginpage = new LoginPage(driver);
-			HomePage home = loginpage.login(usernamevalue, passwordvalue);
+			 home = loginpage.login(usernamevalue, passwordvalue);
 			AdminUserPage info = home.clickAdminUserMoreInfo();
 			info.clickNewButton();
 			

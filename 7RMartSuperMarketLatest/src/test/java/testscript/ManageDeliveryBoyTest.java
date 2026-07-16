@@ -12,6 +12,7 @@ import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
 public class ManageDeliveryBoyTest extends Base {
+	HomePage home;
 	@Test(description="Verify that the user is able to add the Delivery boy details successfully")
 	public void verifyTheUserIsAbleToAddDeliverBoyDetails() throws IOException
 	{
@@ -19,12 +20,14 @@ public class ManageDeliveryBoyTest extends Base {
 		String passwordvalue=ExcelUtility.getStringData(1, 1, "Loginpage");
 		
 		LoginPage loginpage=new LoginPage(driver);
-		HomePage home=loginpage.login(usernamevalue, passwordvalue);
+		 home=loginpage.login(usernamevalue, passwordvalue);
 		ManageDeliveryBoyPage deliveryboy=home.clickManageDeliverBoyMoreInfo();
+		
 		String name=ExcelUtility.getStringData(1, 0, "DeliveryBoy");
 		String email=ExcelUtility.getStringData(1, 1, "DeliveryBoy");
 		String phone=ExcelUtility.getStringData(1, 2, "DeliveryBoy");
 		String address=ExcelUtility.getStringData(1, 3, "DeliveryBoy");
+		
 		FakerUtility data=new FakerUtility();
 		String adduser=data.creatARandomFirstName();
 		String addpass=data.creatARandomLastName();
