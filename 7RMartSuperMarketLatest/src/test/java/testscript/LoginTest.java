@@ -29,7 +29,7 @@ public class LoginTest extends Base{
 		
 		
 	}
-	@Test
+	@Test(description="verify the user is able to Login with valid username and invalid password")
 	public void verifyTheUserIsAbleToLoginWithValidUsernameAndInvalidPassword() throws IOException
 	{
 		String usernamevalue=ExcelUtility.getStringData(2, 0, "Loginpage");
@@ -43,7 +43,7 @@ public class LoginTest extends Base{
 		
 		
 	}
-	@Test
+	@Test(description="verify the user is able to Login with Invalid username and valid password")
 	
 	public void verifyTheUserIsAbleToLoginWithInvalidUsernameAndValidPassword() throws IOException
 	{
@@ -57,7 +57,7 @@ public class LoginTest extends Base{
 		Assert.assertTrue(homepage);
 		
 	}
-	@Test
+	@Test(description="verify the user is able to Login with invalid username and invalid password")
 	public void verifyTheUserIsAbleToLoginWithInvalidUsernameAndInvalidPassword() throws IOException
 	{
 		String usernamevalue=ExcelUtility.getStringData(4, 0, "Loginpage");
