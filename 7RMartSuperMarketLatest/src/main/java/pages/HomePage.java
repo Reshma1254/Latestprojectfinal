@@ -10,6 +10,11 @@ import utilities.WaitUtility;
 
 public class HomePage {
 	public WebDriver driver;
+	@FindBy(xpath = "//a[@data-toggle='dropdown']")
+	WebElement admin;
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/logout'and @class='dropdown-item' ]")
+	WebElement logout;
+	@FindBy(xpath="//button[text()='Sign In']")WebElement signin;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-category'and @class='small-box-footer']")WebElement managecategorymoreinfo;
 	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='small-box-footer']")WebElement managenewsmoreinfo;
@@ -24,6 +29,21 @@ public class HomePage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	public HomePage clickOnAdminButton() {
+		admin.click();
+		return this;
+	}
+
+	public LoginPage clickOnLogOutButton() {
+		logout.click();
+		return new LoginPage(driver);
+	}
+	/*public boolean isSignInisDisplayed()
+	{
+		return signin.isDisplayed();
+		
+	}*/
+
 
 	public ManageCategoryPage clickManageCategoryMoreInfo() {
 		

@@ -42,6 +42,13 @@ public class LoginPage {
 		return alert.isDisplayed();
 		
 	}
+	public boolean isSignInisDisplayed()
+	{
+		return signin.isDisplayed();
+		
+	}
+
+
 	public HomePage login(String usernamevalue,String passwordvalue)
 	{
 		enterUserName(usernamevalue);

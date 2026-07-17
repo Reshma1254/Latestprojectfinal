@@ -2,6 +2,8 @@ package testscript;
 
 import org.testng.annotations.Test;
 
+import constant.Constant;
+
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -24,7 +26,7 @@ public class LoginTest extends Base{
 	
 		loginpage.signIn();
 		boolean homepage=loginpage.isDashboardDisplayed();
-		Assert.assertTrue(homepage);
+		Assert.assertTrue(homepage,Constant.LOGINVALIDCREDENTIALS);
 		
 		
 		
@@ -39,7 +41,7 @@ public class LoginTest extends Base{
 		
 		loginpage.signIn();
 		boolean homepage=loginpage.isAlertDisplayed();
-		Assert.assertTrue(homepage);
+		Assert.assertTrue(homepage,"home page is loaded with invalid password");
 		
 		
 	}

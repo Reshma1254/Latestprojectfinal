@@ -5,5 +5,6 @@ public class Constant {
 	
 	public static final String IMAGE2=System.getProperty("user.dir") +"/src/test/resources/image2.jpeg";
 	public static final String CONFIGFILE=System.getProperty("user.dir") + "/src/main/resources/config.properties";
+	public static final String LOGINVALIDCREDENTIALS="Home page is not loaded with valid credentials";
 
 }

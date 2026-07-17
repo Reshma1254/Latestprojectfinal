@@ -7,13 +7,13 @@ import java.io.IOException;
 import org.testng.Assert;
 
 import pages.HomePage;
-import pages.LogOutPage;
+
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LogOutTest extends Base {
 HomePage home;
-LoginPage login;
+LoginPage loginpage;
 	
 	@Test(retryAnalyzer=retry.Retry.class,groups= {"Regression"},description="verify the user is abe to Log out successfully")
 
@@ -24,14 +24,16 @@ LoginPage login;
 		
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUserName(usernamevalue).enterPassword(passwordvalue);
-		//loginpage.enterPassword(passwordvalue);
-		home=loginpage.signIn();
-	
-		LogOutPage logoutpage = new LogOutPage(driver);
-		loginpage=logoutpage.clickOnAdminButton().clickOnLogOutButton();
 		
-		boolean statuse=logoutpage.isSignInisDisplayed();
+		home=loginpage.signIn();
+	    loginpage=home.clickOnAdminButton().clickOnLogOutButton();
+	
+		
+	
+		
+		boolean statuse=loginpage.isSignInisDisplayed();
 		Assert.assertTrue(statuse);
+		
 
 	}
 
