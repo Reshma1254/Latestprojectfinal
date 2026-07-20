@@ -2,6 +2,8 @@ package testscript;
 
 import org.testng.annotations.Test;
 
+import constant.Constant;
+
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -28,7 +30,7 @@ public class ManageNewsTest extends Base {
 		newsinfo.enterNews(newsreport);
 		newsinfo.clickSave();
 		boolean newsre = newsinfo.isSuccessDisplayed();
-		Assert.assertTrue(newsre);
+		Assert.assertTrue(newsre,Constant.NEWSADDFAILURE);
 		
 
 	}

@@ -41,7 +41,7 @@ public class LoginTest extends Base{
 		
 		loginpage.signIn();
 		boolean homepage=loginpage.isAlertDisplayed();
-		Assert.assertTrue(homepage,"home page is loaded with invalid password");
+		Assert.assertTrue(homepage,Constant.LOGININVALIDPASSWORD);
 		
 		
 	}
@@ -56,7 +56,7 @@ public class LoginTest extends Base{
 		
 		loginpage.signIn();
 		boolean homepage=loginpage.isAlertDisplayed();
-		Assert.assertTrue(homepage);
+		Assert.assertTrue(homepage,Constant.LOGININVALIDUSERNAME);
 		
 	}
 	@Test(description="verify the user is able to Login with invalid username and invalid password")
@@ -69,7 +69,7 @@ public class LoginTest extends Base{
 		
 		loginpage.signIn();
 		boolean homepage=loginpage.isAlertDisplayed();
-		Assert.assertTrue(homepage);
+		Assert.assertTrue(homepage,Constant.LOGININVALIDCREDENTIALS);
 		
 	}
 	

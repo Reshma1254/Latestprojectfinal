@@ -2,6 +2,8 @@ package testscript;
 
 import org.testng.annotations.Test;
 
+import constant.Constant;
+
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -42,7 +44,7 @@ public class AdminUserTest extends Base {
 			info.enterSave();
 			
 			boolean admin=info.isSuccessDisplayed();
-			Assert.assertTrue(admin);
+			Assert.assertTrue(admin,Constant.ADMINUSERFAIL);
 
 			
 

@@ -2,6 +2,8 @@ package testscript;
 
 import org.testng.annotations.Test;
 
+import constant.Constant;
+
 import java.io.IOException;
 
 import org.testng.Assert;
@@ -37,7 +39,7 @@ public class ManageCategoryTest extends Base {
 		add.clickSave();
 		
 		boolean category = add.isSuccessDisplayed();
-		Assert.assertTrue(category);
+		Assert.assertTrue(category,Constant.CATEGORYFAILURE);
 	}
 
 }
