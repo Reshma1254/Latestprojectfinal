@@ -36,12 +36,12 @@ public class AdminUserTest extends Base {
 			String usertype1 = ExcelUtility.getStringData(1, 1, "AdminUser");
 			
 
-			info.enterUsername(usernameval);
+			info.enterUsername(usernameval).enterPassword(passwordvalu).enterUserType(usertype1).enterSave();
 
-			info.enterPassword(passwordvalu);
+			//info.enterPassword(passwordvalu);
 
-			info.enterUserType(usertype1);
-			info.enterSave();
+			//info.enterUserType(usertype1);
+			//info.enterSave();
 			
 			boolean admin=info.isSuccessDisplayed();
 			Assert.assertTrue(admin,Constant.ADMINUSERFAIL);

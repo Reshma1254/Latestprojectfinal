@@ -38,9 +38,10 @@ public class AdminUserPage {
 		username.sendKeys(user);
 		return this;
 	}
-	public void enterPassword(String pass)
+	public AdminUserPage enterPassword(String pass)
 	{
 		password.sendKeys(pass);
+		return this;
 	}
 	public AdminUserPage enterUserType(String type)
 	{

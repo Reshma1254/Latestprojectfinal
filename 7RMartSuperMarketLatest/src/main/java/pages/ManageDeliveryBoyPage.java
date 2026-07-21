@@ -52,9 +52,10 @@ public class ManageDeliveryBoyPage {
 		phone.sendKeys(ph);
 		return this;
 	}
-	public void enterAddress(String adrs)
+	public ManageDeliveryBoyPage enterAddress(String adrs)
 	{
 		address.sendKeys(adrs);
+		return this;
 	}
 	public ManageDeliveryBoyPage enterUsername(String usr)
 	{

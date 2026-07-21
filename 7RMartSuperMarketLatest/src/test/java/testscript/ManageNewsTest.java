@@ -24,11 +24,12 @@ public class ManageNewsTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		 home = loginpage.login(usernamevalue, passwordvalue);
 		ManageNewsPage newsinfo = home.clickManageNewsMoreInfo();
-		newsinfo.clickNewButton();
+		//newsinfo.clickNewButton();
 
 		String newsreport = ExcelUtility.getStringData(1, 0, "NewsInfo");
-		newsinfo.enterNews(newsreport);
-		newsinfo.clickSave();
+		//newsinfo.enterNews(newsreport);
+		//newsinfo.clickSave();
+		newsinfo.clickNewButton().enterNews(newsreport).clickSave();
 		boolean newsre = newsinfo.isSuccessDisplayed();
 		Assert.assertTrue(newsre,Constant.NEWSADDFAILURE);
 		

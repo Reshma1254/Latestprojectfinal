@@ -23,8 +23,8 @@ public class ManageCODTest extends Base {
 		LoginPage loginpage=new LoginPage(driver);
 		 home=loginpage.login(usernamevalue, passwordvalue);
 		ManageCODPage cod=home.clickManageCODMoreInfo();
-		cod.clickFirstRadioButton();
-		cod.clickSave();
+		cod.clickFirstRadioButton().clickSave();
+		//cod.clickSave();
 		boolean cash=cod.isSuccessDisplayed();
 		Assert.assertTrue(cash,Constant.CODFAILURE);
 	}

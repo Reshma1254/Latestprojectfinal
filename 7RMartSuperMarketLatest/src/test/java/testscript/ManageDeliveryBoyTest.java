@@ -32,14 +32,14 @@ public class ManageDeliveryBoyTest extends Base {
 		FakerUtility data=new FakerUtility();
 		String adduser=data.creatARandomFirstName();
 		String addpass=data.creatARandomLastName();
-		deliveryboy.clickNew();
-		deliveryboy.enterName(name);
+		deliveryboy.clickNew().enterName(name).enterEmail(email).enterPhone(phone).enterAddress(address).enterUsername(adduser).enterPassword(addpass).clickSave();
+		/*deliveryboy.enterName(name);
 		deliveryboy.enterEmail(email);
 		deliveryboy.enterPhone(phone);
 		deliveryboy.enterAddress(address);
 		deliveryboy.enterUsername(adduser);
 		deliveryboy.enterPassword(addpass);
-		deliveryboy.clickSave();
+		deliveryboy.clickSave();*/
 		boolean del=deliveryboy.isSuccessDisplayed();
 		Assert.assertTrue(del,Constant.DELIVERYBOYFAIL);
 		

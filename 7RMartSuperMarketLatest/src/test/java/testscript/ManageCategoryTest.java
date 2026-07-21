@@ -25,18 +25,20 @@ public class ManageCategoryTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		 home = loginpage.login(usernamevalue, passwordvalue);
 		ManageCategoryPage add = home.clickManageCategoryMoreInfo();
-		add.clickNewButton();
+	//	add.clickNewButton();
 		
 		// String addcategory=ExcelUtility.getStringData(1, 0, "AddCategory"),category only fakerutility;
 		FakerUtility faker = new FakerUtility();
 		String categoryname = faker.generateCategory();
-		add.enterCategory(categoryname);
+		add.clickNewButton().enterCategory(categoryname).selectGroup().uploadFile().clickSave();
+		
+		//add.enterCategory(categoryname);
 
-		add.selectGroup();
+		//add.selectGroup();
 
-		add.uploadFile();
+		//add.uploadFile();
 
-		add.clickSave();
+		//add.clickSave();
 		
 		boolean category = add.isSuccessDisplayed();
 		Assert.assertTrue(category,Constant.CATEGORYFAILURE);
