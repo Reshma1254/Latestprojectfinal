@@ -38,11 +38,7 @@ public class HomePage {
 		logout.click();
 		return new LoginPage(driver);
 	}
-	/*public boolean isSignInisDisplayed()
-	{
-		return signin.isDisplayed();
-		
-	}*/
+	
 
 
 	public ManageCategoryPage clickManageCategoryMoreInfo() {
