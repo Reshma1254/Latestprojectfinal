@@ -63,6 +63,7 @@ public class Base {
 			scrShot.getScreenShot(driver, iTestResult.getName());
 		}
 		driver.quit();
+		
 
 }
 }
