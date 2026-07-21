@@ -33,13 +33,7 @@ public class ManageDeliveryBoyTest extends Base {
 		String adduser=data.creatARandomFirstName();
 		String addpass=data.creatARandomLastName();
 		deliveryboy.clickNew().enterName(name).enterEmail(email).enterPhone(phone).enterAddress(address).enterUsername(adduser).enterPassword(addpass).clickSave();
-		/*deliveryboy.enterName(name);
-		deliveryboy.enterEmail(email);
-		deliveryboy.enterPhone(phone);
-		deliveryboy.enterAddress(address);
-		deliveryboy.enterUsername(adduser);
-		deliveryboy.enterPassword(addpass);
-		deliveryboy.clickSave();*/
+		
 		boolean del=deliveryboy.isSuccessDisplayed();
 		Assert.assertTrue(del,Constant.DELIVERYBOYFAIL);
 		
